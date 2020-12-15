@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+    /* 
+    Escreva um programa que exiba a mensagem "Nossa diferença de idade é", 
+    concatenando o resultado da subtração da sua idade com a do seu irmão 
+    (ou de um amigo). A resposta pode dar negativa, sem dúvida. 
+    Não esqueça de usar as funções pulaLinha e mostra e inclusive a tag <meta> 
+    para resolver problema de acentuação.
+    */
+
+   function pulaLinha(){
+       document.write("<br>");
+   }
+
+   function mostra(frase){
+       document.write(frase)
+   }
+
+   var peterIdade = 21;
+   var janeIdade = 23;
+
+   var diferencaDeIdade = janeIdade - peterIdade;
+
+   mostra("<h1>A diferença de idades entre Peter e Jane</h1>")
+   pulaLinha();
+   mostra("Nossa diferença de idade é " + diferencaDeIdade + " anos.") 
+</script>
