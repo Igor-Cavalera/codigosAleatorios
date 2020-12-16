@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function mostra(frase) {
+        document.write(frase);
+    }
+
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+
+    /* 
+        Que tal uma dificuldade um pouco maior? Imprima todos os números entre 30 e 40 
+        (inclusive 30 e 40), porém os números 33 e 37 não devem ser impressos! 
+        No final escreva a palavra "FIM". Use o while para essa tarefa. DICA: o if pode ajudá-lo!
+    */ 
+
+    var numerais = 30;
+
+    while ( numerais <= 40 ) {
+
+        if ( numerais == 33 ){
+            numerais += 1;
+        }
+
+        if ( numerais == 37 ){            
+            numerais += 1;
+
+        } else {
+
+            mostra("- " + numerais);
+            pulaLinha();
+            numerais += 1;
+        }
+
+    }
+
+
+    mostra("FIM!");
+
+
+</script>
