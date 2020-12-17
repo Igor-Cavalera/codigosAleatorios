@@ -35,35 +35,37 @@
     2 - Faça com que seu jogo mostre, quando o usuário errar a tentativa, 
         se o número que ele chutou era maior ou menor ao número pensado pelo programa.
 
+        Quando você antes de você chutar o numero no prompt você já havia chamado a função numero que escolheu um valor entre 0 e 10,
+        (Vamos imaginar que foi sorteado o valor 3) e você chute 5, quando você verifica se chute == numero() você faz com que o 
+        programa gere um novo numero (Gerou o numero 9), então você errou o numero e vai consultar se o chute é maior ou menor, 
+        se chute > numero() aqui já ta gerando novamente um numero aleatório, imagina que esse numero é 5, você não tem caso de verificação caso o chute seja igual.
+
+
     */
 
    
-   function numero() {
-       var numeroPensado = Math.round(Math.random() * 10);
-       return numeroPensado;
-    }
-    
-    var chute = parseInt(prompt("Já pensei. Qual você acha que é? (0 a 10)"));
-    
-    if(chute == numero()) {
+   
+   var chute = parseInt(prompt("Já pensei. Qual você acha que é? (0 a 10)"));
+   
+   
+    var numeroPensado = Math.round(Math.random() * 10);
+
+    if(chute == numeroPensado) {
         
-        mostra("Uau! Você acertou, pois eu pensei no " + numero());
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+        
     } else {
         
-        mostra("Você errou! Eu tinha pensado no " + numero());
+        mostra("Você errou! Eu tinha pensado no " + numeroPensado);
         pulaLinha();
-        maiorOUmenor()
+        
     }
     
-    function maiorOUmenor(){
-       if (chute > numero()){
-           
-           mostra("O número que você chutou era maior"); 
-       } else {
- 
-           mostra("O número que você chutou era menor"); 
-       } 
-       return maiorOUmenor;      
-    }
+    if (chute > numeroPensado){
+        
+        mostra("O número que você chutou era maior"); 
+    } else {
 
+        mostra("O número que você chutou era menor"); 
+    }       
 </script>
